@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    function openCity(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+function excluirbt()
+{
+    alert("excluido!");
+    window.location.href = "inicio.html";
+};
+</script>
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="inicio.html">
+                    Home
+                </a>
+            </li>
+
+            <div class="dropdown">
+                <button class="dropbtn">Usuários</button>
+                <div class="dropdown-content">
+                  <a href="#">Relatório do usuários</a>
+                  <a href="#">Relatório Geral</a>
+                  <a href="#">Gerenciar Usuários</a>
+                </div>
+              </div>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">Projeto</button>
+                    <div class="dropdown-content">
+                      <a href="cad_projeto.html">Cadastrar Projeto</a>
+                      <a href="#">Ver Projetos</a>
+                      <a href="#">Relatorios</a>
+                    </div>
+                  </div>
+        
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Relatorio</button>
+                    <div class="dropdown-content">
+                      <a href="#">Relatorio do Mês</a>
+                      <a href="#">Relatório do Semana</a>
+                      <a href="#">Relatório do Dia</a>
+                    </div>
+                  </div>
+
+
+            
+            
+            <li><a href="#">ADS</a></li>
+        </ul>
+    </nav>
+    
+
+   
+   
+      
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"> Instruções </button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">Criar Novo</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')"> Editar</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Excluir</button>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOha0wUJuDc1tt9cidwZkP_nOOSdkGubrB1YwCbrvNstVyvw/viewform?embedded=true" padding-left=100px width="640" height="999" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    function openCity(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+function excluirbt()
+{
+    alert("excluido!");
+    window.location.href = "inicio.html";
+};
+</script>
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="inicio.html">
+                    Home
+                </a>
+            </li>
+
+            <div class="dropdown">
+                <button class="dropbtn">Usuários</button>
+                <div class="dropdown-content">
+                  <a href="#">Relatório do usuários</a>
+                  <a href="#">Relatório Geral</a>
+                  <a href="#">Gerenciar Usuários</a>
+                </div>
+              </div>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">Projeto</button>
+                    <div class="dropdown-content">
+                      <a href="cad_projeto.html">Cadastrar Projeto</a>
+                      <a href="#">Ver Projetos</a>
+                      <a href="#">Relatorios</a>
+                    </div>
+                  </div>
+        
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Relatorio</button>
+                    <div class="dropdown-content">
+                      <a href="#">Relatorio do Mês</a>
+                      <a href="#">Relatório do Semana</a>
+                      <a href="#">Relatório do Dia</a>
+                    </div>
+                  </div>
+
+
+            
+            
+            <li><a href="#">ADS</a></li>
+        </ul>
+    </nav>
+
+    <div id="London" class="tabcontent">
+        <h2>ATUALIZAÇÃO DAS REGRAS PARA CADASTRO DE PROJETO DE PESQUISA
+            A Pró-reitoria de Pesquisa e Pós-graduação (PRPPG) atualizou as regras para o cadastramento de pesquisas desenvolvidas na UFRR.</h2>
+ 
+            <span> A partir de maio de 2017, para efetuar o registro de projetos de pesquisa é necessário entregar, na Secretaria da PRPPG, os documentos abaixo relacionados:
+            
+                1) REQUERIMENTO DO COORDENADOR DO PROJETO DE PESQUISA (datado, assinado, com número de telefone e email);
+                
+                2) FORMULÁRIO DE REGISTRO DE PROJETO (três vias originais);
+                
+                3) PROJETO DE PESQUISA NA ÍNTEGRA (uma cópia);
+                
+                4) OUTRAS AUTORIZAÇÕES NECESSÁRIAS:</span>
+            
+            
+            <span>4.1) Comprovante de submissão expedido pela Plataforma Brasil ou pelo Comitê de Ética em    
+            
+                Pesquisa no Uso de Animais (CEUA-UFRR).
+     
+                4.2) Certificado de Qualidade em Biossegurança, conforme Lei 8974/95 e Decreto 1752/95.
+     
+                4.3) Certificado de Qualidade em Biossegurança para projetos que envolvam experimentos com produtos transgênicos.
+     
+                4.4) Autorização junto ao IBAMA para projetos que serão executados em área de preservação ambiental.
+     
+                4.5) Autorização das instituições que atuam junto às comunidades indígenas para projetos que estudem tais comunidades.
+     
+                4.6) Autorização da Comissão Nacional de Energia Nuclear (CNEN) para projetos que envolvam a manipulação de </h1>
+      </span>
+                       
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <div class="container">
+            <form action="action_page.php">
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="(Nome do Projeto)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="(Responsável)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">Departamento</label>
+                </div>
+                <div class="col-75">
+                  <select id="country" name="country">
+                    <option value="australia">Saúde</option>
+                    <option value="canada">Educação</option>
+                    <option value="usa">Economia</option>
+                    <option value="usa">Serviços</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="Descrição.." style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Enviar">
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      
+      <div id="Tokyo" class="tabcontent">
+        <h1>Editar</h1>
+        <p>Edição de projeto só pode ser feita com autorização do diretor de departamento</p>
+      </div>
+      
+      <div id="Oslo" class="tabcontent">
+        <h1>Certeza que quer excluir ?</h1>
+
+        <button onclick="excluirbt()" style="width:100px;height:40px" > Excluir </button>
+        
+       
+      </div>
+      
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"> Instruções </button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">Criar Novo</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')"> Editar</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Excluir</button>
+</body>
+
+</html>
