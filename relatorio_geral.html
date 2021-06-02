@@ -1,29 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>Imagem de Fundo Preenchendo Toda a Tela</title>
-    <style>
-        /* Estilos (em um site real colocar em arquivo externo) */
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script>
-        // JavaScript (em um site real colocar em arquivo externo)
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizontal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+    function openCity(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+function excluirbt()
+{
+    alert("excluido!");
+    window.location.href = "inicio.html";
+};
+</script>
 <body>
 
-<div id="fundo-externo">
-    <div id="fundo">
-        <img src="https://esferatur.com.br/wp-content/uploads/2017/08/Relatorio-Geral.png" alt="" />
-    </div>
-</div>
-<div id="site">
-    <h1>Site Exemplo</h1>
-    <p>
-        Lorem ipsum...
-    </p>
-</div>
+    <nav id="menu-h">
+        <ul>
+            <li>
+                <a href="inicio.html">
+                    Home
+                </a>
+            </li>
 
+            <div class="dropdown">
+                <button class="dropbtn">Usuários</button>
+                <div class="dropdown-content">
+                  <a href="#">Relatório do usuários</a>
+                  <a href="#">Relatório Geral</a>
+                  <a href="#">Gerenciar Usuários</a>
+                </div>
+              </div>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">Projeto</button>
+                    <div class="dropdown-content">
+                      <a href="cad_projeto.html">Cadastrar Projeto</a>
+                      <a href="#">Ver Projetos</a>
+                      <a href="#">Relatorios</a>
+                    </div>
+                  </div>
+        
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Relatorio</button>
+                    <div class="dropdown-content">
+                      <a href="#">Relatorio do Mês</a>
+                      <a href="#">Relatório do Semana</a>
+                      <a href="#">Relatório do Dia</a>
+                    </div>
+                  </div>
+
+
+            
+            
+            <li><a href="#">ADS</a></li>
+        </ul>
+    </nav>
+    
+    <div id="fundo-externo">
+        <div id="fundo">
+            <img src="https://esferatur.com.br/wp-content/uploads/2017/08/Relatorio-Geral.png" alt="" />
+        </div>
+    </div>
+   
+   
+      
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"> Instruções </button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">Criar Novo</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')"> Editar</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Excluir</button>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOha0wUJuDc1tt9cidwZkP_nOOSdkGubrB1YwCbrvNstVyvw/viewform?embedded=true" padding-left=100px width="640" height="999" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 </body>
+
 </html>
+

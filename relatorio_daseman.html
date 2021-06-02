@@ -31,6 +31,13 @@
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+function excluirbt()
+{
+    alert("excluido!");
+    window.location.href = "inicio.html";
+};
 </script>
 <body>
 
@@ -73,43 +80,24 @@ document.getElementById("defaultOpen").click();
 
             
             
-            <li><a href="Login_v1/index.html">SAIR DO SISTEMA</a></li>
+            <li><a href="#">ADS</a></li>
         </ul>
     </nav>
-
-    <div id="London" class="tabcontent">
-        <h1>Projeto 1</h1>
-        <h1>Projeto 2</h1>
-        <h1>Projeto 3</h1>
-        <h1>Projeto 4</h1>
-        <h1>Projeto 5</h1>       
-      </div>
-      
-      <div id="Paris" class="tabcontent">
-        <h1>Projeto 1</h1>
-        <p>Paris is the capital of France.</p>
-
-        <figure>
-            <img src="http://gembagroup.com.br/wp-content/uploads/2018/08/Iniciacao-projeto.png" witdh=200px height= 300px alt="Minha Figura">
-            <figcaption>Informações da Figura</figcaption>
-          </figure>
+    
+    <div id="fundo-externo">
+        <div id="fundo">
+            <img src="https://binaries.templates.cdn.office.net/support/templates/pt-br/lt03107674_quantized.png" alt="" />
         </div>
-        
+    </div>
+   
+   
       
-      <div id="Tokyo" class="tabcontent">
-        <h1>Projeto Tokyo</h1>
-        <p>Sistema que cadastrar operadores de serviços residenciais</p>
-      </div>
-      
-      <div id="Oslo" class="tabcontent">
-        <h1>Projeto Oslo</h1>
-        <p>Projeto de controle de medicação</p>
-      </div>
-      
-      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"> Todos os Projetos</button>
-      <button class="tablink" onclick="openCity('Paris', this, 'green')">Projeto 1</button>
-      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')"> Projeto 2</button>
-      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Projeto 3</button>
+      <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"> Instruções </button>
+      <button class="tablink" onclick="openCity('Paris', this, 'green')">Criar Novo</button>
+      <button class="tablink" onclick="openCity('Tokyo', this, 'blue')"> Editar</button>
+      <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Excluir</button>
+
+    
 </body>
 
 </html>
